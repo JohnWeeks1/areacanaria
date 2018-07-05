@@ -13,7 +13,7 @@ _________________________________________________________ -->
                  </li>
                  <li><a href="faq.html">FAQ</a>
                  </li> -->
-                 <li><a href="contact.html"><?php echo $GLOBALS['contact_us'] ?></a>
+                 <li><a href="<?php echo base_url("Admin_controller/contact_us"); ?>"><?php echo $GLOBALS['contact_us'] ?></a>
                  </li>
              </ul>
 
@@ -119,7 +119,7 @@ _________________________________________________________ -->
                  <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
                  <!-- <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
                  <a href="#" class="gplus external" data-animate-hover="shake"><i class="fa fa-google-plus"></i></a> -->
-                 <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
+                 <a href="<?php echo base_url("Admin_controller/contact_us"); ?>" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
              </p>
 
 

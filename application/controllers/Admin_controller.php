@@ -62,6 +62,31 @@ class Admin_controller extends CI_Controller {
 		$data['users'] = $this->User_model->all_users();
 		$this->load->view('admin/users', $data);
 	}
+	public function contact_us(){
+		$this->load->view('contact/contact_us');
+	}
+	public function contact_us_send(){
+			$this->form_validation->set_rules('name', 'Name', 'required');
+			$this->form_validation->set_rules('subject', 'Subject', 'required');
+			$this->form_validation->set_rules('email', 'Email', 'required');
+			$this->form_validation->set_rules('message', 'Message', 'required');
+				if($this->form_validation->run() == false){
+						$this->load->view('contact/contact_us');
+				} else {
+						$name = $this->input->post("name");
+						$subject = $this->input->post("subject");
+						$email = $this->input->post("email");
+						$message = $this->input->post("message");
+
+						$this->email->from("$email", "$name");
+						$this->email->to("area.canaria.info@gmail.com");
+						$this->email->subject("$subject");
+						$this->email->message("$message");
+						$this->email->send();
+						$this->session->set_flashdata("success", "Usted acaba de enviarnos un mensaje. ¡Estupendo! Nos pondremos en contacto con usted lo antes posible.");
+						$this->load->view('contact/contact_us');
+				}
+	}
 	public function eventos_view($evento_id){
 		$data['eventos_by_id'] = $this->Eventos_model->evento_by_id($evento_id);
 		$evento_user_id = $data['eventos_by_id'][0]['eventos_user_id'];

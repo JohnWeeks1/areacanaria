@@ -102,3 +102,5 @@ $GLOBALS['donations'] = "Donaciones";
 $GLOBALS['Sorry, to view this page you need to be loggedin or register'] = "Lo sentimos, para ver esta página debe iniciar sesión o registrarse";
 $GLOBALS['You just added a location'] = "Usted acaba de agregar una ubicación";
 $GLOBALS['Your current location is'] = "Tu ubicación actual es";
+$GLOBALS['subject'] = "Tema";
+$GLOBALS['name'] = "Nobre";
