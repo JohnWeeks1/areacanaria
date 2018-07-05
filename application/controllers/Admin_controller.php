@@ -84,7 +84,7 @@ class Admin_controller extends CI_Controller {
 						$this->email->message("$message");
 						$this->email->send();
 						$this->session->set_flashdata("success", "Usted acaba de enviarnos un mensaje. ¡Estupendo! Nos pondremos en contacto con usted lo antes posible.");
-						$this->load->view('contact/contact_us');
+						redirect(base_url("Home_controller"));
 				}
 	}
 	public function eventos_view($evento_id){
