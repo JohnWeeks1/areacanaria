@@ -17,10 +17,10 @@
 
         <div class="container-fluid">
             <div class="masonry-container">
-                <div class="col-xs-12 col-sm-4 col-md-2 masonry-sizer"></div>
+                <div class="col-xs-12 col-sm-4 col-md-3 masonry-sizer"></div>
                 <!-- left empty for column sizing -->
                 <?php foreach ($eventos as $evento) { ?>
-                <div class="col-xs-12 col-sm-4 col-md-2 masonry-item">
+                <div class="col-xs-12 col-sm-4 col-md-3 masonry-item">
                     <div class="panel panel-default panel-front">
                         <div class="panel-heading">
                             <!-- <h4 class="panel-title"><a HREF="#"><img src="<?php //echo base_url('assets/img/') . $related_product['product_image']?>"></a></h4> -->
