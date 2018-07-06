@@ -80,27 +80,29 @@
                                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <a href="" data-toggle="modal" data-target="#show_map"> <?php echo $GLOBALS['view_location']; ?></a>
                                 <!-- Modal -->
-                                <?php
-                                    $lat = $location['location_lat'];
-                                    $lng = $location['location_lng'];
-
-                                        $CI =& get_instance();
-                                        $CI->load->library('custom_modal');
-                                        $CI->custom_modal->admin_modal(
-                                          $modal_id_name = "show_map",
-                                          $class = "modal-md",
-                                          $id = "",
-                                          $modal_title = "Location",
-                                          $body = "
-
-                                           <div id='map' style='height:400px; width:100%;'></div>
-
-                                                  ",
-                                          $footer = "<button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
-                                                    <a class='btn btn-info pull-right' href='https://maps.google.com/?q=$lat,$lng' target='_blank'>View full map</a>
-                                          "
-                                        );
+                                    <?php
+                                        $lat = $location['location_lat'];
+                                        $lng = $location['location_lng'];
                                      ?>
+                                     <div id='show_map' class='modal fade' role='dialog'>
+                                         <div class='modal-dialog'>
+                                             <!-- Modal content-->
+                                             <div class='modal-content'>
+                                                 <div class='modal-header bg-primary'>
+                                                   <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                                                   <h4 class='modal-title'>Location</h4>
+                                                 </div>
+                                                 <div class='modal-body'>
+                                                      <div id='map' style='height:400px; width:100%;'></div>
+                                                 </div>
+
+                                                 <div class='modal-footer'>
+                                                   <button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
+                                                    <a class='btn btn-info pull-right' href='https://maps.google.com/?q=$lat,$lng' target='_blank'>View full map</a>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
                                 <!-- Modal END -->
                                 <?php } ?>
                                 <?php } ?>
@@ -115,26 +117,33 @@
                                     $id = $user['user_id'];
                                     $user_phone = $user['user_phone'];
                                     $user_email = $user['user_email'];
-                                    $CI =& get_instance();
-                                    $CI->load->library('custom_modal');
-                                    $CI->custom_modal->admin_modal(
-                                      $modal_id_name = "whatsappModalProfile",
-                                      $class = "",
-                                      $id = "$id",
-                                      $modal_title = "Whatsapp Message",
-                                      $body = "<div class='form-group'>
-                                                  <label for='phone'>Phone Number</label>
-                                                  <input type='phone' class='form-control' id='phone' value='$user_phone' readonly>
-                                                </div>
-                                                <div class='form-group'>
-                                                  <label for='comment'>Message</label>
-                                                  <textarea class='form-control' rows='5' id='message'></textarea>
-                                                </div>",
-                                      $footer = "<button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
-                                                 <a type='button' href='https://api.whatsapp.com/send' id='send_whatsapp_message' target='_blank' class='btn btn-success pull-right'>Send to user</a>"
-
-                                    );
                                     ?>
+                                    <div id='whatsappModalProfile<?php echo $id; ?>' class='modal fade' role='dialog'>
+                                        <div class='modal-dialog'>
+                                            <!-- Modal content-->
+                                            <div class='modal-content'>
+                                                <div class='modal-header bg-primary'>
+                                                  <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                                                  <h4 class='modal-title'>Whatsapp Message</h4>
+                                                </div>
+                                                <div class='modal-body'>
+                                                            <div class='form-group'>
+                                                              <label for='phone'>Phone Number</label>
+                                                              <input type='phone' class='form-control' id='phone' value='<?php echo $user_phone; ?>' readonly>
+                                                            </div>
+                                                            <div class='form-group'>
+                                                              <label for='comment'>Message</label>
+                                                              <textarea class='form-control' rows='5' id='message'></textarea>
+                                                            </div>
+                                                </div>
+
+                                                <div class='modal-footer'>
+                                                             <button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
+                                                             <a type='button' href='https://api.whatsapp.com/send' id='send_whatsapp_message' target='_blank' class='btn btn-success pull-right'>Send to user</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <!-- Modal END -->
                                 <?php } ?>
                               </li>
@@ -218,26 +227,32 @@
                             $view_comments = base_url('Profile_controller/see_comments');
                             $profile_search = base_url("Profile_controller/profile_search");
                             $view_eventos_i_will_attend = base_url('Eventos_controller/i_will_attend/') . $user['user_id'];
-                                $CI =& get_instance();
-                                $CI->load->library('custom_modal');
-                                $CI->custom_modal->admin_modal(
-                                  $modal_id_name = "edit",
-                                  $class = "",
-                                  $id = "",
-                                  $modal_title = "Edit",
-                                  $body = "
-                                  <div class='list-group text-center'>
-                              				<a href='$edit_profile' class='list-group-item'>$profile</a>
-                              				<a href='$edit_picture' class='list-group-item'>$image</a>
-                              				<a href='$edit_location' class='list-group-item'>$location</a>
-                                      <a href='$view_comments' class='list-group-item'>$view_comments1</a>
-                                      <a href='$profile_search' class='list-group-item'>$profile_search1</a>
-                                      <a href='$view_eventos_i_will_attend' class='list-group-item'>$events_i_am_going_to</a>
-                                  </div>
-                                          ",
-                                  $footer = "<button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>$close</button>"
-                                );
                              ?>
+                             <div id='edit' class='modal fade' role='dialog'>
+                                 <div class='modal-dialog'>
+                                     <!-- Modal content-->
+                                     <div class='modal-content'>
+                                         <div class='modal-header bg-primary'>
+                                           <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                                           <h4 class='modal-title'>Edit</h4>
+                                         </div>
+                                         <div class='modal-body'>
+                                           <div class='list-group text-center'>
+                                              <a href='<?php echo $edit_profile; ?>' class='list-group-item'><?php echo $profile; ?></a>
+                                              <a href='<?php echo $edit_picture; ?>' class='list-group-item'><?php echo $image; ?></a>
+                                              <a href='<?php echo $edit_location; ?>' class='list-group-item'><?php echo $location; ?></a>
+                                               <a href='<?php echo $view_comments; ?>' class='list-group-item'><?php echo $view_comments1; ?></a>
+                                               <a href='<?php echo $profile_search; ?>' class='list-group-item'><?php echo $profile_search1; ?></a>
+                                               <a href='<?php echo $view_eventos_i_will_attend; ?>' class='list-group-item'><?php echo $events_i_am_going_to; ?></a>
+                                           </div>
+                                         </div>
+
+                                         <div class='modal-footer'>
+                                              <button type='button' class='btn btn-danger pull-left' data-dismiss='modal'><?php echo $close; ?></button>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
                         <!-- Modal END -->
                         <?php } ?>
                         <?php } ?>

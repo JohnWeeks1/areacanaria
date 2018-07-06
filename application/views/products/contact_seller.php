@@ -30,7 +30,9 @@
             <hr>
 
             <?php foreach ($products as $product) { ?>
-            <?php echo form_open_multipart(base_url("Products_controller/message_seller/") . $this->uri->segment(3)."/".$this->uri->segment(4)); ?>
+            <?php
+                  echo form_open_multipart(base_url("Products_controller/message_seller/") . $this->uri->segment(3)."/".$this->uri->segment(4));
+             ?>
             <div class="col-md-12">
               <ul class="nav nav-pills">
                   <li class="active"><a data-toggle="pill" href="#home"><?php echo $GLOBALS['email']; ?></a></li>
@@ -61,11 +63,12 @@
                           </div>
                           <div class="row">
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> Send Email</button>
+                                <button type="submit" name+="email" class="btn btn-primary"><i class="fa fa-user-md"></i> Send Email</button>
                             </div>
                           </div>
                     </p>
                     </div>
+                    <?php echo form_close(); ?>
                     <div id="menu1" class="tab-pane fade">
                       <p>
                         <div class="col-md-6">
@@ -77,24 +80,24 @@
                         <div class="col-md-6">
                           <h5><?php echo $GLOBALS['mobile']; ?></h5>
                             <div class="form-group">
-                                <input type="number" class="form-control" id="user_phone" name="user_phone" placeholder="Email" value="<?php echo $user['user_phone']; ?>" readonly>
+                                <input type="number" class="form-control" id="phone" placeholder="Email" value="<?php echo $user['user_phone']; ?>" readonly>
                             </div>
                         </div>
                         <div class="col-md-12">
                           <h5><?php echo $GLOBALS['message']; ?></h5>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" name="product_description" id="product_description"></textarea>
+                                <textarea class="form-control" rows="5" id="message"></textarea>
                             </div>
                         </div>
                         <div class="row">
                           <div class="text-center">
-                              <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> <?php echo $GLOBALS['send_whatsapp']; ?></button>
+                            <a type='button' href='https://api.whatsapp.com/send' id='send_whatsapp_message' target='_blank' class='btn btn-success'><?php echo $GLOBALS['send_whatsapp']; ?></a>
                           </div>
                         </div>
                       </p>
                     </div>
                   </div>
-                  <?php echo form_close(); ?>
+
                 <?php } ?>
               <?php } ?>
             </div>

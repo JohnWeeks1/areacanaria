@@ -108,7 +108,7 @@ class Admin_controller extends CI_Controller {
 		$user_profile = base_url("Profile_controller/profile/$user_id");
 		//custom_email_helper
 		$this->send_email(
-								$from = "jonathanweeks007@gmail.com",
+								$from = "area.canaria.info@gmail.com",
 								$to = "$user_email",
 								// $from = "$current_user_email",
 								// $to = "$user_email" ,
@@ -127,8 +127,8 @@ class Admin_controller extends CI_Controller {
 			 'protocol' => 'smtp',
 			 'smtp_host' => 'ssl://smtp.gmail.com',
 			 'smtp_port' => 465,
-			 'smtp_user' => 'jonathanweeks007@gmail.com', // change it to yours
-			 'smtp_pass' => 'ForkLittle67!', // change it to yours
+			 'smtp_user' => 'area.canaria.info@gmail.com', // change it to yours
+			 'smtp_pass' => '@re@c@n@ri@2018', // change it to yours
 			 // 'wordwrap' => TRUE
 		 );
 
@@ -158,8 +158,8 @@ class Admin_controller extends CI_Controller {
 			$current_user_email = $this->session->userdata("user_email");
 			//custom_email_helper
 			send_email(
-									$from = "jonathanweeks007@gmail.com",
-									$to = "jonathanweeks007@gmail.com" ,
+									$from = "area.canaria.info@gmail.com",
+									$to = "$user_email" ,
 									// $from = "$current_user_email",
 									// $to = "$user_email" ,
 									$subject = "Area Canaria",

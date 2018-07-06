@@ -92,22 +92,29 @@
                                         <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                                       <a href="" class="btn btn-success btn-xs" data-toggle="modal" data-target="#show_map"><?php echo $GLOBALS['map']; ?></a>
                                       <!-- Modal -->
-                                      <?php
-                                          $lat = $location['location_lat'];
-                                          $lng = $location['location_lng'];
-                                              $CI =& get_instance();
-                                              $CI->load->library('custom_modal');
-                                              $CI->custom_modal->admin_modal(
-                                                $modal_id_name = "show_map",
-                                                $class = "modal-md",
-                                                $id = "",
-                                                $modal_title = "Location",
-                                                $body = "<div id='map' style='height:400px; width:100%;'></div>",
-                                                $footer = "<button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
-                                                          <a class='btn btn-info pull-right' href='https://maps.google.com/?q=$lat,$lng' target='_blank'>View full map</a>
-                                                "
-                                              );
+                                          <?php
+                                              $lat = $location['location_lat'];
+                                              $lng = $location['location_lng'];
                                            ?>
+                                           <div id='show_map' class='modal fade' role='dialog'>
+                                               <div class='modal-dialog'>
+                                                   <!-- Modal content-->
+                                                   <div class='modal-content'>
+                                                       <div class='modal-header bg-primary'>
+                                                         <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                                                         <h4 class='modal-title'>Location</h4>
+                                                       </div>
+                                                       <div class='modal-body'>
+                                                            <div id='map' style='height:400px; width:100%;'></div>
+                                                       </div>
+
+                                                       <div class='modal-footer'>
+                                                         <button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
+                                                          <a class='btn btn-info pull-right' href='https://maps.google.com/?q=$lat,$lng' target='_blank'>View full map</a>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
                                       <!-- Modal END -->
                                       <?php } ?>
                                           <?php if($evento['eventos_user_id'] == $this->session->userdata("user_id")) { ?>

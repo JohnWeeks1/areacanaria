@@ -40,6 +40,7 @@ class Eventos_controller extends CI_Controller {
     $location = array(
         'location_lng' => $this->input->post('location_lng'),
         'location_lat' => $this->input->post('location_lat'),
+        'location_name' => $this->input->post('location_name'),
         'location_user_id' => $this->session->userdata("user_id"),
         'location_evento_id' => $evento_id);
 
