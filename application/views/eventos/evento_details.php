@@ -110,7 +110,7 @@
 
                                                        <div class='modal-footer'>
                                                          <button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
-                                                          <a class='btn btn-info pull-right' href='https://maps.google.com/?q=$lat,$lng' target='_blank'>View full map</a>
+                                                          <?php echo "<a class='btn btn-info pull-right' href='https://maps.google.com/?q=$lat,$lng' target='_blank'>View full map</a>"; ?>
                                                        </div>
                                                    </div>
                                                </div>
@@ -129,19 +129,14 @@
                                       <?php } ?>
                                   </div>
                                 </div>
+                                <hr>
                                       <!-- Load Facebook SDK for JavaScript -->
                                       <?php
                                             $seg3 = $this->uri->segment(3);
                                             $seg4 = $this->uri->segment(4);
                                         ?>
-                                      <div class="fb-like" data-href="<?php echo base_url('Eventos_controller/details/') . "$seg3/$seg4"; ?>" data-width="160" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                                      <script>(function(d, s, id) {
-                                        var js, fjs = d.getElementsByTagName(s)[0];
-                                        if (d.getElementById(id)) return;
-                                        js = d.createElement(s); js.id = id;
-                                        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
-                                        fjs.parentNode.insertBefore(js, fjs);
-                                      }(document, 'script', 'facebook-jssdk'));</script>
+                                      <div class="fb-like" data-href="https://fb.me/CanaryStyle" data-width="160" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
                             </div>
                         </div>
                     </div>

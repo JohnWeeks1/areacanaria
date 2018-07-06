@@ -71,27 +71,27 @@
                     <?php echo form_close(); ?>
                     <div id="menu1" class="tab-pane fade">
                       <p>
-                        <div class="col-md-6">
-                          <h5><?php echo $GLOBALS['product']; ?></h5>
+                        <!-- <div class="col-md-6">
+                          <h5><?php //echo $GLOBALS['product']; ?></h5>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $product['product_name'] ?>" readonly>
                             </div>
-                        </div>
-                        <div class="col-md-6">
+                        </div> -->
+                        <div class="col-md-12">
                           <h5><?php echo $GLOBALS['mobile']; ?></h5>
                             <div class="form-group">
-                                <input type="number" class="form-control" id="phone" placeholder="Email" value="<?php echo $user['user_phone']; ?>" readonly>
+                                <input type="number" class="form-control" id="contact_seller_phone" placeholder="Email" value="<?php echo $user['user_phone']; ?>" readonly>
                             </div>
                         </div>
                         <div class="col-md-12">
                           <h5><?php echo $GLOBALS['message']; ?></h5>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" id="message"></textarea>
+                                <textarea class="form-control" rows="5" id="contact_seller_message"></textarea>
                             </div>
                         </div>
                         <div class="row">
                           <div class="text-center">
-                            <a type='button' href='https://api.whatsapp.com/send' id='send_whatsapp_message' target='_blank' class='btn btn-success'><?php echo $GLOBALS['send_whatsapp']; ?></a>
+                            <a type='button' href='https://api.whatsapp.com/send' target='_blank' class='btn btn-primary send_whatsapp_message'><?php echo $GLOBALS['send_whatsapp']; ?></a>
                           </div>
                         </div>
                       </p>

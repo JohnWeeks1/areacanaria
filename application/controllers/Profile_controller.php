@@ -29,10 +29,10 @@ class Profile_controller extends CI_Controller {
 					'user_firstname' => $this->input->post('user_firstname'),
 					'user_lastname' => $this->input->post('user_lastname'),
 					'user_email' => $this->input->post('user_email'),
-					'user_phone' => $this->input->post('user_phone'),
 					'user_facebook' => $this->input->post('user_facebook'),
 					'user_profile_or_business' => $this->input->post('user_profile_or_business'),
 					'user_twitter' => $this->input->post('user_twitter'));
+					$data['user_phone'] = $this->input->post('user_country_code') . $this->input->post('user_phone');
 
 		return $data;
 	}
