@@ -53,7 +53,7 @@ class Products_model extends CI_Model {
     }
 
     public function product_by_id($product_id) {
-        //$this->db->join("$this->users_table","$this->users_table.user_id = $this->products_table.product_user_id", 'left');
+        $this->db->join("$this->users_table","$this->users_table.user_id = $this->products_table.product_user_id", 'left');
         $this->db->where("product_id", $product_id);
         $query = $this->db->get($this->products_table);
         return $query->result_array();

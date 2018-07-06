@@ -43,15 +43,28 @@ return false;
 
     $(".fancybox").fancybox();
 
-    $('#send_whatsapp_message').click(function () {
+    $('.send_whatsapp_message').click(function () {
         var link = $(this).attr("href");
-        var phone = $("#phone").val();
-        var message = $('#message').val();
-        var totalPhone = '?phone=' + phone;
-        var totalmessage = '&text=' + message;
-        var info = totalPhone + totalmessage;
-        var result = link + info;
-        $('#send_whatsapp_message').attr("href", result);
+        if($("#phone").val() != null && $("#message").val() != null) {
+          var phone = $("#phone").val();
+          var message = $('#message').val();
+          var totalPhone = '?phone=' + phone;
+          var totalmessage = '&text=' + message;
+          var info = totalPhone + totalmessage;
+          var result = link + info;
+          $('.send_whatsapp_message').attr("href", result);
+        }
+
+        if($("#contact_seller_phone").val() != null && $("#contact_seller_message").val() != null) {
+          var phone = $("#contact_seller_phone").val();
+          var message = $('#contact_seller_message').val();
+          var totalPhone = '?phone=' + phone;
+          var totalmessage = '&text=' + message;
+          var info = totalPhone + totalmessage;
+          var result = link + info;
+          $('.send_whatsapp_message').attr("href", result);
+        }
+
     });
 
     $('.removeIn3').delay(3000).hide('slow');

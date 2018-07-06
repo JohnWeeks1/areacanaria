@@ -104,8 +104,14 @@
                             <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                               <h5><?php echo $GLOBALS['mobile']; ?></h5>
+                              <div class="form-group">
+                                  <select class="form-control" id="user_country_code" name="user_country_code">
+                                    <option value="+34">Spain (+34)</option>
+                                    <option value="+44">United Kingdom (+44)</option>
+                                  </select>
+                              </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="user_phone" name="user_phone" placeholder="Email" value="<?php echo $user['user_phone'];; ?>">
+                                    <input type="number" class="form-control" id="user_phone" name="user_phone" placeholder="Email" value="<?php echo substr($user['user_phone'],2,20); ?>">
                                 </div>
                             </div>
                           </div>

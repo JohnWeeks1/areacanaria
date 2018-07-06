@@ -34,97 +34,16 @@ _________________________________________________________ -->
              <hr class="hidden-md hidden-lg hidden-sm">
 
          </div>
-         <!-- /.col-md-3 -->
-
-         <!-- <div class="col-md-3 col-sm-6">
-
-             <h4>Top categories</h4>
-
-             <h5>Men</h5>
-
-             <ul>
-                 <li><a href="category.html">T-shirts</a>
-                 </li>
-                 <li><a href="category.html">Shirts</a>
-                 </li>
-                 <li><a href="category.html">Accessories</a>
-                 </li>
-             </ul>
-
-             <h5>Ladies</h5>
-             <ul>
-                 <li><a href="category.html">T-shirts</a>
-                 </li>
-                 <li><a href="category.html">Skirts</a>
-                 </li>
-                 <li><a href="category.html">Pants</a>
-                 </li>
-                 <li><a href="category.html">Accessories</a>
-                 </li>
-             </ul>
-
-             <hr class="hidden-md hidden-lg">
-
-         </div> -->
-         <!-- /.col-md-3 -->
-
-         <!-- <div class="col-md-3 col-sm-6">
-
-             <h4>Where to find us</h4>
-
-             <p><strong>Obaju Ltd.</strong>
-                 <br>13/25 New Avenue
-                 <br>New Heaven
-                 <br>45Y 73J
-                 <br>England
-                 <br>
-                 <strong>Great Britain</strong>
-             </p>
-
-             <a href="contact.html">Go to contact page</a>
-
-             <hr class="hidden-md hidden-lg">
-
-         </div> -->
-         <!-- /.col-md-3 -->
-
-
-
          <div class="col-md-3 col-sm-6">
-
-             <!-- <h4>Get the news</h4>
-
-             <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
-             <form>
-                 <div class="input-group">
-
-                     <input type="text" class="form-control">
-
-                     <span class="input-group-btn">
-
-     <button class="btn btn-default" type="button">Subscribe!</button>
-
- </span>
-
-                 </div>
-             </form>
-
-             <hr> -->
-
              <h4><?php echo $GLOBALS['stay_in_touch'] ?></h4>
-
              <p class="social">
-                 <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+                 <a href="https://fb.me/CanaryStyle" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
                  <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
                  <!-- <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
                  <a href="#" class="gplus external" data-animate-hover="shake"><i class="fa fa-google-plus"></i></a> -->
                  <a href="<?php echo base_url("Admin_controller/contact_us"); ?>" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
              </p>
-
-
          </div>
-         <!-- /.col-md-3 -->
 
          <div class="col-md-3 col-sm-6">
              <h4><?php echo $GLOBALS['donations']; ?></h4>
@@ -182,6 +101,13 @@ _________________________________________________________ -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 </body>
