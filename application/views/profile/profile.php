@@ -139,7 +139,7 @@
 
                                                 <div class='modal-footer'>
                                                              <button type='button' class='btn btn-danger pull-left' data-dismiss='modal'>Close</button>
-                                                             <a type='button' href='https://api.whatsapp.com/send' id='send_whatsapp_message' target='_blank' class='btn btn-success pull-right'>Send to user</a>
+                                                             <a type='button' href='https://api.whatsapp.com/send' target='_blank' class='btn btn-success pull-right send_whatsapp_message'>Send to user</a>
                                                 </div>
                                             </div>
                                         </div>
