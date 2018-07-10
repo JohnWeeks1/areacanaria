@@ -191,17 +191,6 @@ class Products_controller extends CI_Controller
          $product_link_id
        ) {
 
-        $ci =& get_instance();
-
-        $config = Array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'ssl://smtp.gmail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'area.canaria.info@gmail.com', // change it to yours
-            'smtp_pass' => '@re@c@n@ri@2018' // change it to yours
-            // 'wordwrap' => TRUE
-        );
-
         //load email library
         $this->load->library('email', $config);
         $this->email->set_newline("\r\n");

@@ -83,17 +83,6 @@ class Auth_controller extends CI_Controller {
 		}
 
 		public function send_email($from, $to ,$subject) {
-      //get main CodeIgniter object
-       $ci =& get_instance();
-
-       $config = Array(
-         'protocol' => 'smtp',
-         'smtp_host' => 'ssl://smtp.gmail.com',
-         'smtp_port' => 465,
-         'smtp_user' => 'area.canaria.info@gmail.com', // change it to yours
-         'smtp_pass' => '@re@c@n@ri@2018', // change it to yours
-         // 'wordwrap' => TRUE
-       );
 
        //load email library
        $this->load->library('email', $config);
@@ -107,7 +96,6 @@ class Auth_controller extends CI_Controller {
 			// $this->email->attach(base_url() . "assets/site_img/area_canaria_logo.png", "inline");
 
        $this->email->set_mailtype('html');
-
 
        $this->email->send();
 
