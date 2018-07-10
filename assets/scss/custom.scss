@@ -1,16 +1,16 @@
 /* Limit image width to avoid overflow the container */
 .crop_img {
   max-width: 100%;
-  /* This rule is very important, please do not ignore this! */ }
-
+  /* This rule is very important, please do not ignore this! */
+}
 .container-fluid {
-  padding: 0; }
-
+  padding: 0;
+}
 /* map styles */
 #map {
   height: 500px;
-  width: 100%; }
-
+  width: 100%;
+}
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
@@ -19,8 +19,8 @@
   -moz-box-sizing: border-box;
   height: 32px;
   outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
-
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 #pac-input {
   background-color: #fff;
   font-family: Roboto;
@@ -29,43 +29,49 @@
   margin-left: 12px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
-  width: 300px; }
-  #pac-input:focus {
-    border-color: #4d90fe; }
-
+  width: 300px;
+  &:focus {
+    border-color: #4d90fe;
+  }
+}
 .pac-container {
-  font-family: Roboto; }
-
+  font-family: Roboto;
+}
 #type-selector {
   color: #fff;
   background-color: #4d90fe;
-  padding: 5px 11px 0px 11px; }
-  #type-selector label {
+  padding: 5px 11px 0px 11px;
+  label {
     font-family: Roboto;
     font-size: 13px;
-    font-weight: 300; }
-
+    font-weight: 300;
+  }
+}
 /* map styles END */
 /* Panel for INICIO */
 .panel-front {
   /* Only for this preview */
   margin-bottom: 20px;
-  margin-top: 20px; }
-  .panel-front .panel-heading {
-    padding: 0px; }
-    .panel-front .panel-heading .panel-title img {
+  margin-top: 20px;
+  .panel-heading {
+    .panel-title img {
       border-radius: 3px 3px 0px 0px;
-      width: 100%; }
-    .panel-front .panel-heading h4 {
-      line-height: 0; }
-  .panel-front .panel-body h4 {
+      width: 100%;
+    }
+    padding: 0px;
+    h4 {
+      line-height: 0;
+    }
+  }
+  .panel-body h4 {
     font-weight: bold;
     margin-top: 5px;
-    margin-bottom: 15px; }
-
+    margin-bottom: 15px;
+  }
+}
 .text-right {
-  margin-top: 10px; }
-
+  margin-top: 10px;
+}
 /* Panel for INICIO END */
 input, textarea {
   outline: none;
@@ -76,69 +82,74 @@ input, textarea {
   -webkit-font-smoothing: antialiased;
   font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1rem;
-  color: #555f77; }
-
+  color: #555f77;
+}
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input::-moz-placeholder, textarea::-moz-placeholder, input:-moz-placeholder, textarea:-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #ced2db; }
-
+  color: #ced2db;
+}
 p {
-  line-height: 1.3125rem; }
-
+  line-height: 1.3125rem;
+}
 .comments {
   margin: 2.5rem auto 0;
   max-width: 60.75rem;
-  padding: 0 1.25rem; }
-
+  padding: 0 1.25rem;
+}
 .comment-wrap {
   margin-bottom: 1.25rem;
   display: table;
   width: 100%;
-  min-height: 5.3125rem; }
-
+  min-height: 5.3125rem;
+}
 .photo {
   padding-top: 0.625rem;
   display: table-cell;
-  width: 3.5rem; }
-  .photo .avatar {
+  width: 3.5rem;
+  .avatar {
     height: 2.25rem;
     width: 2.25rem;
     border-radius: 50%;
-    background-size: contain; }
-
+    background-size: contain;
+  }
+}
 .comment-block {
   padding: 1rem;
   background-color: #fff;
   display: table-cell;
   vertical-align: top;
   border-radius: 0.1875rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08); }
-  .comment-block textarea {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  textarea {
     width: 100%;
-    resize: none; }
-
+    resize: none;
+  }
+}
 .comment-text {
-  margin-bottom: 1.25rem; }
-
+  margin-bottom: 1.25rem;
+}
 .bottom-comment {
   color: #acb4c2;
-  font-size: 0.875rem; }
-
+  font-size: 0.875rem;
+}
 .comment-date {
-  float: left; }
-
+  float: left;
+}
 .comment-actions {
-  float: right; }
-  .comment-actions li {
+  float: right;
+  li {
     display: inline;
     margin: -2px;
-    cursor: pointer; }
-    .comment-actions li.complain {
+    cursor: pointer;
+    &.complain {
       padding-right: 0.75rem;
-      border-right: 1px solid #e1e5eb; }
-    .comment-actions li.reply {
+      border-right: 1px solid #e1e5eb;
+    }
+    &.reply {
       padding-left: 0.75rem;
-      padding-right: 0.125rem; }
-    .comment-actions li:hover {
-      color: #0095ff; }
-
-/*# sourceMappingURL=custom.css.map */
+      padding-right: 0.125rem;
+    }
+    &:hover {
+      color: #0095ff;
+    }
+  }
+}

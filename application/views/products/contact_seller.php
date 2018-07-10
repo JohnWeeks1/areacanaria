@@ -63,7 +63,7 @@
                           </div>
                           <div class="row">
                             <div class="text-center">
-                                <button type="submit" name+="email" class="btn btn-primary"><i class="fa fa-user-md"></i> Send Email</button>
+                                <button type="submit" name+="email" class="btn btn-primary"><i class="fa fa-user-md"></i> <?php echo $GLOBALS["send_email"]; ?></button>
                             </div>
                           </div>
                     </p>
@@ -74,7 +74,7 @@
                         <!-- <div class="col-md-6">
                           <h5><?php //echo $GLOBALS['product']; ?></h5>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $product['product_name'] ?>" readonly>
+                                <input type="text" class="form-control" id="product_name" name="product_name" value="<?php //echo $product['product_name'] ?>" readonly>
                             </div>
                         </div> -->
                         <div class="col-md-12">
@@ -91,7 +91,7 @@
                         </div>
                         <div class="row">
                           <div class="text-center">
-                            <a type='button' href='https://api.whatsapp.com/send' target='_blank' class='btn btn-primary send_whatsapp_message'><?php echo $GLOBALS['send_whatsapp']; ?></a>
+                            <a type='button' href='https://api.whatsapp.com/send' target='_blank' class='btn btn-primary send_whatsapp_message'><i class="fa fa-user-md"></i> <?php echo $GLOBALS['send_whatsapp']; ?></a>
                           </div>
                         </div>
                       </p>
